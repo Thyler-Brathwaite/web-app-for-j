@@ -32,10 +32,10 @@
 
         <div class="imagess">
             <div class="image-slider">
-            <img src="images/_Valentine's Day Ideas_ DIY Gifts, Romantic Dates, Crafts, Recipes & More_.jpeg" alt="">
+            <img src="images/download (2).jpeg" alt="">
             <img src="images/Cozy Candlelit Dinner Ideas.jpeg" alt="">
             <img src="images/dinner2.jpg" alt="">
-            <img src="images/_Valentine's Day Ideas_ DIY Gifts, Romantic Dates, Crafts, Recipes & More_.jpeg" alt="">
+            <img src="images/download (2).jpeg" alt="">
             </div>
         </div>
 
@@ -51,39 +51,8 @@
       audio.volume = 0.1;
     });
   </script>
-</div>
-<script src="https://apis.google.com/js/api.js"></script>
-<script>
-  function authenticate() {
-    return gapi.auth2.getAuthInstance()
-      .signIn({ scope: "https://www.googleapis.com/auth/calendar.events.readonly" })
-      .then(() => console.log("Signed in"));
-  }
-
-  function loadClient() {
-    gapi.client.setApiKey("AIzaSyBmvPK79w-NqiFsW6dX8XrvpntTb-wYqPU");
-    return gapi.client.load("https://content.googleapis.com/discovery/v1/apis/calendar/v3/rest")
-      .then(() => console.log("GAPI client loaded for API"));
-  }
-
-  function listEvents() {
-    return gapi.client.calendar.events.list({
-      calendarId: "primary",
-      timeMin: (new Date()).toISOString(),
-      showDeleted: false,
-      singleEvents: true,
-      maxResults: 5,
-      orderBy: "startTime"
-    }).then(function(response) {
-      const events = response.result.items;
-      console.log("Upcoming events:", events);
-    });
-  }
-
-  gapi.load("client:auth2", () => {
-    gapi.auth2.init({ client_id: "YOUR_CLIENT_ID" });
-  });
-</script>
-
-<button onclick="authenticate().then(loadClient).then(listEvents)">Load Events</button>
+ </div>
+  <div>
+    <a href="https://calendar.google.com/calendar/embed?src=5b8545e5d7058c7ddda447eede861f24fafc5df0a1c7e75a088d340669556a0a%40group.calendar.google.com&ctz=UTC"><button>Start Planning</button></a>
+ </div>
 </body>
