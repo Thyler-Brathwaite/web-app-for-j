@@ -129,18 +129,22 @@ left: 75%;
 .info{
     display:grid;
     grid-template-columns: auto;
+    
 }
 
 .info span{ 
  color:rgb(243, 142, 157);
+  animation:info-up 1s ease-in-out forwards ;
 }
 
 .info p{
     color: rgb(245, 0, 41);
+     animation:info-up 1.8s ease-in-out forwards ;
 }
 
 .info h1{
     color: rgb(153, 0, 26);
+     animation:info-up 1.4s ease-in-out forwards ;
 }
 
 .imagess{
@@ -151,7 +155,8 @@ left: 75%;
     margin-right: 100px;
     border-radius: 15px;
     box-shadow: -10px 10px 150px red;
-    
+    animation:info-up 1.9s ease-in-out forwards ;
+   
     
      
 }
@@ -214,9 +219,21 @@ button{
     background-color: rgb(153, 0, 26);
     color:rgb(243, 142, 157) ;
     margin-top:20px;
+     animation:info-up 1.9s ease-in-out forwards ;
 }
 
 button:hover{
     background-color: rgb(243, 142, 157);
     color:rgb(153, 0, 26);
+}
+
+@keyframes info-up {
+    from{
+        opacity: 0.2;
+        transform:translateY(50px)
+    }
+    to{
+        opacity: 1;
+        transform:translateY(0)
+    }
 }

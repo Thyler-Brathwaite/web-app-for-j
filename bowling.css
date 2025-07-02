@@ -133,14 +133,17 @@ left: 75%;
 
 .info span{ 
  color:rgb(127, 235, 127);
+ animation:info-up 1s ease-in-out forwards ;
 }
 
 .info p{
     color: rgb(35, 175, 35);
+    animation:info-up 1.9s ease-in-out forwards ;
 }
 
 .info h1{
     color: rgb(1, 59, 1);
+    animation:info-up 1.4s ease-in-out forwards ;
 }
 
 .imagess{
@@ -151,6 +154,7 @@ left: 75%;
     margin-right: 100px;
     border-radius: 15px;
     box-shadow: -10px 10px 150px green;
+    animation:info-up 1.9s ease-in-out forwards ;
     
     
      
@@ -214,9 +218,21 @@ button{
     background-color: rgb(1, 59, 1);
     color:rgb(127, 235, 127) ;
     margin-top:20px;
+    animation:info-up 1.9s ease-in-out forwards ;
 }
 
 button:hover{
     background-color: rgb(127, 235, 127);
     color:rgb(1, 59, 1);
+}
+
+@keyframes info-up {
+    from{
+        opacity: 0.2;
+        transform:translateY(50px)
+    }
+    to{
+        opacity: 1;
+        transform:translateY(0)
+    }
 }
